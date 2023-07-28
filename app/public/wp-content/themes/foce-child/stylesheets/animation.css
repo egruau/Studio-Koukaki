@@ -1,0 +1,33 @@
+@keyframes RotationFlower {
+  from {
+    transform: rotate(0turn);
+  }
+  to {
+    transform: rotate(1turn);
+  }
+}
+.story h2::after {
+  animation: RotationFlower 10000ms 1ms linear infinite;
+}
+.story__article::after {
+  animation: RotationFlower 10000ms 1ms linear infinite;
+}
+
+#studio h2::before {
+  animation: RotationFlower 10000ms 1ms linear infinite;
+}
+#studio h2::after {
+  animation: RotationFlower 10000ms 1ms linear infinite;
+}
+
+#colophon::before {
+  animation: RotationFlower 10000ms 1ms linear infinite;
+}
+#colophon::after {
+  animation: RotationFlower 10000ms 1ms linear infinite;
+}
+#colophon ul::after {
+  animation: RotationFlower 10000ms 1ms linear infinite;
+}
+
+/*# sourceMappingURL=animation.css.map */

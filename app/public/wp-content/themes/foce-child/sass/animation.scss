@@ -1,0 +1,51 @@
+$anim-dur: 10000ms;
+$anim-delay: 1ms;
+
+@keyframes RotationFlower {
+    from {
+        transform: rotate(0turn);}
+    to {
+        transform: rotate(1turn);
+    }
+    }
+
+.story {
+    h2{
+        &::after {
+            animation: RotationFlower $anim-dur $anim-delay linear infinite;
+        }
+    }
+    &__article {
+        &::after {
+            animation: RotationFlower $anim-dur $anim-delay linear infinite;
+        }
+
+    }
+}
+
+#studio {
+    h2 {
+        &::before {
+            animation: RotationFlower $anim-dur $anim-delay linear infinite;
+        }
+        &::after {
+            animation: RotationFlower $anim-dur $anim-delay linear infinite;
+        }
+    }
+}
+
+#colophon {
+    &::before {
+        animation: RotationFlower $anim-dur $anim-delay linear infinite;
+    }
+    &::after {
+        animation: RotationFlower $anim-dur $anim-delay linear infinite;
+    }
+    ul {
+        &::after {
+            animation: RotationFlower $anim-dur $anim-delay linear infinite;
+        }
+    }
+}
+
+
