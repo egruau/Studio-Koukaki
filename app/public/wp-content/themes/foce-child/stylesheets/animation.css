@@ -30,4 +30,37 @@
   animation: RotationFlower 10000ms 1ms linear infinite;
 }
 
+.fadeIn {
+  animation: fadeIn 800ms ease-out 800ms both;
+}
+
+.fadeDown {
+  animation: fadeDown 800ms ease-out 820ms both;
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    transform: translateY(200%);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0%);
+  }
+}
+@keyframes fadeDown {
+  0% {
+    opacity: 0;
+    transform: translateY(-100%);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0%);
+  }
+}
+.nomination h3 {
+  background-image: url("../assets/images/orange_place_bg.png");
+  background-size: cover;
+}
+
 /*# sourceMappingURL=animation.css.map */

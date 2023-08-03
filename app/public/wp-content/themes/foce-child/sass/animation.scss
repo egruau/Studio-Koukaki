@@ -48,4 +48,46 @@ $anim-delay: 1ms;
     }
 }
 
+$sectionPosition: 0%;
+$sectionUp: 200%;
+$sectionDown: -100%;
+$animationDelay: 800ms;
+$animationDuration: 800ms;
 
+.fadeIn {
+  animation: fadeIn $animationDuration ease-out $animationDelay both;
+}
+
+.fadeDown {
+  animation: fadeDown $animationDuration ease-out #{$animationDuration + 20} both;
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    transform: translateY($sectionUp);
+  }
+  
+  100% {
+    opacity: 1;
+    transform: translateY($sectionPosition);
+  }
+}
+
+@keyframes fadeDown {
+  0% {
+    opacity: 0;
+    transform: translateY($sectionDown);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY($sectionPosition);
+  }
+}
+
+.nomination {
+    h3 {
+        background-image: url("../assets/images/orange_place_bg.png");
+        background-size: cover;
+}}
