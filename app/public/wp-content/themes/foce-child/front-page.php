@@ -14,7 +14,7 @@ get_header();
 
     <section id="#story" class="story fadeIn">
 
-        <h2>L'histoire</h2>
+        <h2> <span class="story__title">L'histoire </span> </h2>
         <article id="" class="story__article">
             <p><?php echo get_theme_mod('story'); ?></p>
         </article>

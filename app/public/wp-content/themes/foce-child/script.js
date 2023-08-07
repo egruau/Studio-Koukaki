@@ -5,7 +5,6 @@ function scrollAnimation(targetClass, targetContainer, animation) {
             if (entry.isIntersecting) {
                 section.classList.add(`${animation}`);
                 return;
-                console.log('interieur fonction');
             }
             section.classList.remove(`${animation}`);
         });
@@ -15,8 +14,7 @@ function scrollAnimation(targetClass, targetContainer, animation) {
     elements.forEach(element => observer.observe(element));
 }
 
-scrollAnimation('.studio__title__first', '#studio', 'gradient-box');
-scrollAnimation('.studio__title__second', '#studio', 'gradient-box');
-scrollAnimation('.story h2', '.story', 'gradient-box');
 
-console.log('coucou')
+scrollAnimation('.story__title', '.story h2', 'fadeIn');
+scrollAnimation('.studio__title__first', '#studio', 'fadeIn');
+scrollAnimation('.studio__title__second', '#studio', 'fadeIn');

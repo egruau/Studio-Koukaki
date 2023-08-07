@@ -6,38 +6,6 @@
     transform: rotate(1turn);
   }
 }
-.story h2::after {
-  animation: RotationFlower 10000ms 1ms linear infinite;
-}
-.story__article::after {
-  animation: RotationFlower 10000ms 1ms linear infinite;
-}
-
-#studio h2::before {
-  animation: RotationFlower 10000ms 1ms linear infinite;
-}
-#studio h2::after {
-  animation: RotationFlower 10000ms 1ms linear infinite;
-}
-
-#colophon::before {
-  animation: RotationFlower 10000ms 1ms linear infinite;
-}
-#colophon::after {
-  animation: RotationFlower 10000ms 1ms linear infinite;
-}
-#colophon ul::after {
-  animation: RotationFlower 10000ms 1ms linear infinite;
-}
-
-.fadeIn {
-  animation: fadeIn 800ms ease-out 800ms both;
-}
-
-.fadeDown {
-  animation: fadeDown 800ms ease-out 820ms both;
-}
-
 @keyframes fadeIn {
   0% {
     opacity: 0;
@@ -58,9 +26,92 @@
     transform: translateY(0%);
   }
 }
+.fadeIn {
+  animation: fadeIn 800ms ease-out 800ms both;
+}
+
+.fadeDown {
+  animation: fadeDown 800ms ease-out 820ms both;
+}
+
+.story h2::after {
+  animation: RotationFlower 10000ms 1ms linear infinite;
+}
+.story h2 .story__title {
+  display: inline-block;
+  opacity: 0;
+}
+.story__article::after {
+  animation: RotationFlower 10000ms 1ms linear infinite;
+}
+
+#studio h2::before {
+  animation: RotationFlower 10000ms 1ms linear infinite;
+}
+#studio h2::after {
+  animation: RotationFlower 10000ms 1ms linear infinite;
+}
+#studio h2 .studio__title__first {
+  display: inline-block;
+  opacity: 0;
+  animation-delay: 800ms;
+}
+#studio h2 .studio__title__second {
+  display: inline-block;
+  opacity: 0;
+  animation-delay: 1s;
+}
+
+.nomination {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 200px;
+}
+.nomination::before {
+  content: url("../assets/images/Sunflower.png");
+  position: absolute;
+  left: 4em;
+  top: -12em;
+  animation: RotationFlower 10000ms 1ms linear infinite;
+}
+.nomination::after {
+  content: url("../assets/images/orchid.png");
+  position: absolute;
+  right: -4em;
+  bottom: 22em;
+  animation: RotationFlower 10000ms 1ms linear infinite;
+}
 .nomination h3 {
-  background-image: url("../assets/images/orange_place_bg.png");
-  background-size: cover;
+  background-image: url("../assets/images/orange_oscars_bg.png");
+  background-repeat: no-repeat;
+  background-size: 792px 269px;
+  margin: 0;
+  background-position: center;
+  text-align: left;
+  font-size: 42px;
+  line-height: normal;
+  font-weight: 700;
+  letter-spacing: -0.84px;
+  padding: 1em 2em;
+  text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  width: 815px;
+}
+.nomination img {
+  width: 278px;
+  height: 129px;
+}
+
+#colophon::before {
+  display: none;
+  animation: RotationFlower 10000ms 1ms linear infinite;
+}
+#colophon::after {
+  display: none;
+  animation: RotationFlower 10000ms 1ms linear infinite;
+}
+#colophon ul::after {
+  animation: RotationFlower 10000ms 1ms linear infinite;
 }
 
 /*# sourceMappingURL=animation.css.map */

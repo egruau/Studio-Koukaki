@@ -1,25 +1,74 @@
+// VARIABLES // 
 $anim-dur: 10000ms;
 $anim-delay: 1ms;
+$sectionPosition: 0%;
+$sectionUp: 200%;
+$sectionDown: -100%;
+$animationDelay: 800ms;
+$animationDuration: 800ms;
 
+
+// KEYFRAMES //
 @keyframes RotationFlower {
     from {
-        transform: rotate(0turn);}
+        transform: rotate(0turn);
+    }
+
     to {
         transform: rotate(1turn);
     }
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+        transform: translateY($sectionUp);
     }
 
+    100% {
+        opacity: 1;
+        transform: translateY($sectionPosition);
+    }
+}
+
+@keyframes fadeDown {
+    0% {
+        opacity: 0;
+        transform: translateY($sectionDown);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY($sectionPosition);
+    }
+}
+
+// ANIMATIONS CLASSES // 
+.fadeIn {
+    animation: fadeIn $animationDuration ease-out $animationDelay both;
+}
+
+.fadeDown {
+    animation: fadeDown $animationDuration ease-out #{$animationDuration + 20} both;
+}
+
+// STRUCTURE SITE //
+
 .story {
-    h2{
+    h2 {
         &::after {
             animation: RotationFlower $anim-dur $anim-delay linear infinite;
         }
+        .story__title {
+             display: inline-block;
+            opacity: 0;
+        }
     }
+
     &__article {
         &::after {
             animation: RotationFlower $anim-dur $anim-delay linear infinite;
         }
-
     }
 }
 
@@ -28,66 +77,80 @@ $anim-delay: 1ms;
         &::before {
             animation: RotationFlower $anim-dur $anim-delay linear infinite;
         }
+
         &::after {
             animation: RotationFlower $anim-dur $anim-delay linear infinite;
         }
+        .studio__title__first {
+            display: inline-block;
+            opacity: 0;
+            animation-delay: 800ms;
+        }
+        .studio__title__second { 
+            display: inline-block;
+            opacity: 0;
+            animation-delay: 1s;
+        }
+    }
+
+}
+
+.nomination {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 200px;
+    &::before {
+        content: url('../assets/images/Sunflower.png');
+        position: absolute;
+        left: 4em;
+        top: -12em;
+        animation: RotationFlower $anim-dur $anim-delay linear infinite;
+      }
+      &::after {
+        content: url('../assets/images/orchid.png');
+        position: absolute;
+        right: -4em;
+        bottom: 22em;
+        animation: RotationFlower $anim-dur $anim-delay linear infinite;
+    
+      }
+    h3 {
+        background-image: url("../assets/images/orange_oscars_bg.png");
+        background-repeat: no-repeat;
+        background-size: 792px 269px;
+        margin: 0;
+        background-position: center;
+        text-align: left;
+        font-size: 42px;
+        line-height: normal;
+        font-weight: 700;
+        letter-spacing: -0.84px;
+        padding: 1em 2em;
+        text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+        width: 815px;
+    }
+
+    img {
+        width: 278px;
+        height: 129px;
     }
 }
 
 #colophon {
     &::before {
+        display: none;
         animation: RotationFlower $anim-dur $anim-delay linear infinite;
     }
+
     &::after {
+        display: none;
         animation: RotationFlower $anim-dur $anim-delay linear infinite;
     }
+
     ul {
         &::after {
             animation: RotationFlower $anim-dur $anim-delay linear infinite;
         }
     }
 }
-
-$sectionPosition: 0%;
-$sectionUp: 200%;
-$sectionDown: -100%;
-$animationDelay: 800ms;
-$animationDuration: 800ms;
-
-.fadeIn {
-  animation: fadeIn $animationDuration ease-out $animationDelay both;
-}
-
-.fadeDown {
-  animation: fadeDown $animationDuration ease-out #{$animationDuration + 20} both;
-}
-
-@keyframes fadeIn {
-  0% {
-    opacity: 0;
-    transform: translateY($sectionUp);
-  }
-  
-  100% {
-    opacity: 1;
-    transform: translateY($sectionPosition);
-  }
-}
-
-@keyframes fadeDown {
-  0% {
-    opacity: 0;
-    transform: translateY($sectionDown);
-  }
-
-  100% {
-    opacity: 1;
-    transform: translateY($sectionPosition);
-  }
-}
-
-.nomination {
-    h3 {
-        background-image: url("../assets/images/orange_place_bg.png");
-        background-size: cover;
-}}
