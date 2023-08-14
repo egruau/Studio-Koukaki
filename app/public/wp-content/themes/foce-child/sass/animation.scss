@@ -43,6 +43,34 @@ $animationDuration: 800ms;
     }
 }
 
+@keyframes float {
+
+    0%,
+    100% {
+        transform: translate(0, 0);
+    }
+
+    20% {
+        transform: translate(11px, -6px);
+    }
+
+    30% {
+        transform: translate(5px, 10px);
+    }
+
+    50% {
+        transform: translate(-4px, -12px);
+    }
+
+    70% {
+        transform: translate(-8px, -8px);
+    }
+
+    90% {
+        transform: translate(-13px, -3px);
+    }
+}
+
 // ANIMATIONS CLASSES // 
 .fadeIn {
     animation: fadeIn $animationDuration ease-out $animationDelay both;
@@ -52,15 +80,37 @@ $animationDuration: 800ms;
     animation: fadeDown $animationDuration ease-out #{$animationDuration + 20} both;
 }
 
-// STRUCTURE SITE //
 
+// STRUCTURE SITE //
+#page {
+    overflow: hidden;
+}
+.banner {
+    @media (min-width: 426px) {
+    background-image: none;
+    }
+    overflow:hidden;
+    img {
+        animation: fadeIn $animationDuration ease-out $animationDelay both, float 6s 2s ease-in-out infinite;
+    }
+    #background-video {
+        position: fixed;
+        z-index: -1;
+        width: 100%;
+        transition: transform 1s ease-in-out;
+        @media (max-width:425px ){
+            display: none;
+        }
+    }
+}
 .story {
     h2 {
         &::after {
             animation: RotationFlower $anim-dur $anim-delay linear infinite;
         }
+
         .story__title {
-             display: inline-block;
+            display: inline-block;
             opacity: 0;
         }
     }
@@ -69,6 +119,28 @@ $animationDuration: 800ms;
         &::after {
             animation: RotationFlower $anim-dur $anim-delay linear infinite;
         }
+    }
+    #place {
+        background-image: url("../assets/images/Studio_Koukaki-image_place.png");
+            .clouds {
+                width: 100%;
+                height: 100%;
+                transform: translateX(0);
+            }
+            .big_cloud {
+                filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+                position: absolute;
+                right: 93px;
+                top: 65px;
+                transform: translateX(0);
+            }
+            .little_cloud {
+                filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+                position: absolute;
+                right: 505px;
+                top: 248px;
+                transform: translateX(0);
+            }
     }
 }
 
@@ -81,12 +153,14 @@ $animationDuration: 800ms;
         &::after {
             animation: RotationFlower $anim-dur $anim-delay linear infinite;
         }
+
         .studio__title__first {
             display: inline-block;
             opacity: 0;
             animation-delay: 800ms;
         }
-        .studio__title__second { 
+
+        .studio__title__second {
             display: inline-block;
             opacity: 0;
             animation-delay: 1s;
@@ -100,21 +174,24 @@ $animationDuration: 800ms;
     justify-content: center;
     align-items: center;
     margin-top: 200px;
+
     &::before {
         content: url('../assets/images/Sunflower.png');
         position: absolute;
         left: 4em;
         top: -12em;
         animation: RotationFlower $anim-dur $anim-delay linear infinite;
-      }
-      &::after {
+    }
+
+    &::after {
         content: url('../assets/images/orchid.png');
         position: absolute;
         right: -4em;
         bottom: 22em;
         animation: RotationFlower $anim-dur $anim-delay linear infinite;
-    
-      }
+
+    }
+
     h3 {
         background-image: url("../assets/images/orange_oscars_bg.png");
         background-repeat: no-repeat;
