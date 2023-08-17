@@ -134,7 +134,7 @@ CREATE TABLE `wp_options` (
   PRIMARY KEY (`option_id`),
   UNIQUE KEY `option_name` (`option_name`),
   KEY `autoload` (`autoload`)
-) ENGINE=InnoDB AUTO_INCREMENT=1269 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_520_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=1414 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_520_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -188,7 +188,7 @@ INSERT INTO `wp_options` VALUES (42,'comment_registration','0','yes');
 INSERT INTO `wp_options` VALUES (43,'html_type','text/html','yes');
 INSERT INTO `wp_options` VALUES (44,'use_trackback','0','yes');
 INSERT INTO `wp_options` VALUES (45,'default_role','subscriber','yes');
-INSERT INTO `wp_options` VALUES (46,'db_version','53496','yes');
+INSERT INTO `wp_options` VALUES (46,'db_version','55853','yes');
 INSERT INTO `wp_options` VALUES (47,'uploads_use_yearmonth_folders','1','yes');
 INSERT INTO `wp_options` VALUES (48,'upload_path','','yes');
 INSERT INTO `wp_options` VALUES (49,'blog_public','1','yes');
@@ -247,7 +247,7 @@ INSERT INTO `wp_options` VALUES (101,'fresh_site','0','yes');
 INSERT INTO `wp_options` VALUES (102,'user_count','1','no');
 INSERT INTO `wp_options` VALUES (103,'widget_block','a:6:{i:2;a:1:{s:7:\"content\";s:19:\"<!-- wp:search /-->\";}i:3;a:1:{s:7:\"content\";s:154:\"<!-- wp:group --><div class=\"wp-block-group\"><!-- wp:heading --><h2>Recent Posts</h2><!-- /wp:heading --><!-- wp:latest-posts /--></div><!-- /wp:group -->\";}i:4;a:1:{s:7:\"content\";s:227:\"<!-- wp:group --><div class=\"wp-block-group\"><!-- wp:heading --><h2>Recent Comments</h2><!-- /wp:heading --><!-- wp:latest-comments {\"displayAvatar\":false,\"displayDate\":false,\"displayExcerpt\":false} /--></div><!-- /wp:group -->\";}i:5;a:1:{s:7:\"content\";s:146:\"<!-- wp:group --><div class=\"wp-block-group\"><!-- wp:heading --><h2>Archives</h2><!-- /wp:heading --><!-- wp:archives /--></div><!-- /wp:group -->\";}i:6;a:1:{s:7:\"content\";s:150:\"<!-- wp:group --><div class=\"wp-block-group\"><!-- wp:heading --><h2>Categories</h2><!-- /wp:heading --><!-- wp:categories /--></div><!-- /wp:group -->\";}s:12:\"_multiwidget\";i:1;}','yes');
 INSERT INTO `wp_options` VALUES (104,'sidebars_widgets','a:3:{s:19:\"wp_inactive_widgets\";a:0:{}s:9:\"sidebar-1\";a:5:{i:0;s:7:\"block-2\";i:1;s:7:\"block-3\";i:2;s:7:\"block-4\";i:3;s:7:\"block-5\";i:4;s:7:\"block-6\";}s:13:\"array_version\";i:3;}','yes');
-INSERT INTO `wp_options` VALUES (105,'cron','a:9:{i:1691509846;a:1:{s:34:\"wp_privacy_delete_old_export_files\";a:1:{s:32:\"40cd750bba9870f18aada2478b24840a\";a:3:{s:8:\"schedule\";s:6:\"hourly\";s:4:\"args\";a:0:{}s:8:\"interval\";i:3600;}}}i:1691542246;a:4:{s:18:\"wp_https_detection\";a:1:{s:32:\"40cd750bba9870f18aada2478b24840a\";a:3:{s:8:\"schedule\";s:10:\"twicedaily\";s:4:\"args\";a:0:{}s:8:\"interval\";i:43200;}}s:16:\"wp_version_check\";a:1:{s:32:\"40cd750bba9870f18aada2478b24840a\";a:3:{s:8:\"schedule\";s:10:\"twicedaily\";s:4:\"args\";a:0:{}s:8:\"interval\";i:43200;}}s:17:\"wp_update_plugins\";a:1:{s:32:\"40cd750bba9870f18aada2478b24840a\";a:3:{s:8:\"schedule\";s:10:\"twicedaily\";s:4:\"args\";a:0:{}s:8:\"interval\";i:43200;}}s:16:\"wp_update_themes\";a:1:{s:32:\"40cd750bba9870f18aada2478b24840a\";a:3:{s:8:\"schedule\";s:10:\"twicedaily\";s:4:\"args\";a:0:{}s:8:\"interval\";i:43200;}}}i:1691542263;a:1:{s:21:\"wp_update_user_counts\";a:1:{s:32:\"40cd750bba9870f18aada2478b24840a\";a:3:{s:8:\"schedule\";s:10:\"twicedaily\";s:4:\"args\";a:0:{}s:8:\"interval\";i:43200;}}}i:1691549875;a:1:{s:21:\"ai1wm_storage_cleanup\";a:1:{s:32:\"40cd750bba9870f18aada2478b24840a\";a:3:{s:8:\"schedule\";s:5:\"daily\";s:4:\"args\";a:0:{}s:8:\"interval\";i:86400;}}}i:1691585446;a:1:{s:32:\"recovery_mode_clean_expired_keys\";a:1:{s:32:\"40cd750bba9870f18aada2478b24840a\";a:3:{s:8:\"schedule\";s:5:\"daily\";s:4:\"args\";a:0:{}s:8:\"interval\";i:86400;}}}i:1691585463;a:2:{s:19:\"wp_scheduled_delete\";a:1:{s:32:\"40cd750bba9870f18aada2478b24840a\";a:3:{s:8:\"schedule\";s:5:\"daily\";s:4:\"args\";a:0:{}s:8:\"interval\";i:86400;}}s:25:\"delete_expired_transients\";a:1:{s:32:\"40cd750bba9870f18aada2478b24840a\";a:3:{s:8:\"schedule\";s:5:\"daily\";s:4:\"args\";a:0:{}s:8:\"interval\";i:86400;}}}i:1691585464;a:1:{s:30:\"wp_scheduled_auto_draft_delete\";a:1:{s:32:\"40cd750bba9870f18aada2478b24840a\";a:3:{s:8:\"schedule\";s:5:\"daily\";s:4:\"args\";a:0:{}s:8:\"interval\";i:86400;}}}i:1691758246;a:1:{s:30:\"wp_site_health_scheduled_check\";a:1:{s:32:\"40cd750bba9870f18aada2478b24840a\";a:3:{s:8:\"schedule\";s:6:\"weekly\";s:4:\"args\";a:0:{}s:8:\"interval\";i:604800;}}}s:7:\"version\";i:2;}','yes');
+INSERT INTO `wp_options` VALUES (105,'cron','a:10:{i:1692229846;a:1:{s:34:\"wp_privacy_delete_old_export_files\";a:1:{s:32:\"40cd750bba9870f18aada2478b24840a\";a:3:{s:8:\"schedule\";s:6:\"hourly\";s:4:\"args\";a:0:{}s:8:\"interval\";i:3600;}}}i:1692233446;a:4:{s:18:\"wp_https_detection\";a:1:{s:32:\"40cd750bba9870f18aada2478b24840a\";a:3:{s:8:\"schedule\";s:10:\"twicedaily\";s:4:\"args\";a:0:{}s:8:\"interval\";i:43200;}}s:16:\"wp_version_check\";a:1:{s:32:\"40cd750bba9870f18aada2478b24840a\";a:3:{s:8:\"schedule\";s:10:\"twicedaily\";s:4:\"args\";a:0:{}s:8:\"interval\";i:43200;}}s:17:\"wp_update_plugins\";a:1:{s:32:\"40cd750bba9870f18aada2478b24840a\";a:3:{s:8:\"schedule\";s:10:\"twicedaily\";s:4:\"args\";a:0:{}s:8:\"interval\";i:43200;}}s:16:\"wp_update_themes\";a:1:{s:32:\"40cd750bba9870f18aada2478b24840a\";a:3:{s:8:\"schedule\";s:10:\"twicedaily\";s:4:\"args\";a:0:{}s:8:\"interval\";i:43200;}}}i:1692233463;a:1:{s:21:\"wp_update_user_counts\";a:1:{s:32:\"40cd750bba9870f18aada2478b24840a\";a:3:{s:8:\"schedule\";s:10:\"twicedaily\";s:4:\"args\";a:0:{}s:8:\"interval\";i:43200;}}}i:1692241075;a:1:{s:21:\"ai1wm_storage_cleanup\";a:1:{s:32:\"40cd750bba9870f18aada2478b24840a\";a:3:{s:8:\"schedule\";s:5:\"daily\";s:4:\"args\";a:0:{}s:8:\"interval\";i:86400;}}}i:1692276646;a:1:{s:32:\"recovery_mode_clean_expired_keys\";a:1:{s:32:\"40cd750bba9870f18aada2478b24840a\";a:3:{s:8:\"schedule\";s:5:\"daily\";s:4:\"args\";a:0:{}s:8:\"interval\";i:86400;}}}i:1692276663;a:2:{s:19:\"wp_scheduled_delete\";a:1:{s:32:\"40cd750bba9870f18aada2478b24840a\";a:3:{s:8:\"schedule\";s:5:\"daily\";s:4:\"args\";a:0:{}s:8:\"interval\";i:86400;}}s:25:\"delete_expired_transients\";a:1:{s:32:\"40cd750bba9870f18aada2478b24840a\";a:3:{s:8:\"schedule\";s:5:\"daily\";s:4:\"args\";a:0:{}s:8:\"interval\";i:86400;}}}i:1692276664;a:1:{s:30:\"wp_scheduled_auto_draft_delete\";a:1:{s:32:\"40cd750bba9870f18aada2478b24840a\";a:3:{s:8:\"schedule\";s:5:\"daily\";s:4:\"args\";a:0:{}s:8:\"interval\";i:86400;}}}i:1692363046;a:1:{s:30:\"wp_site_health_scheduled_check\";a:1:{s:32:\"40cd750bba9870f18aada2478b24840a\";a:3:{s:8:\"schedule\";s:6:\"weekly\";s:4:\"args\";a:0:{}s:8:\"interval\";i:604800;}}}i:1692565068;a:1:{s:30:\"wp_delete_temp_updater_backups\";a:1:{s:32:\"40cd750bba9870f18aada2478b24840a\";a:3:{s:8:\"schedule\";s:6:\"weekly\";s:4:\"args\";a:0:{}s:8:\"interval\";i:604800;}}}s:7:\"version\";i:2;}','yes');
 INSERT INTO `wp_options` VALUES (106,'widget_pages','a:1:{s:12:\"_multiwidget\";i:1;}','yes');
 INSERT INTO `wp_options` VALUES (107,'widget_calendar','a:1:{s:12:\"_multiwidget\";i:1;}','yes');
 INSERT INTO `wp_options` VALUES (108,'widget_archives','a:1:{s:12:\"_multiwidget\";i:1;}','yes');
@@ -289,19 +289,19 @@ INSERT INTO `wp_options` VALUES (1088,'ai1wm_backups_labels','a:0:{}','yes');
 INSERT INTO `wp_options` VALUES (1089,'ai1wm_sites_links','a:0:{}','yes');
 INSERT INTO `wp_options` VALUES (1090,'ai1wm_backups_path','C:\\Users\\gruau\\OneDrive\\Documents\\Openclassroom\\Projet 9\\app\\public/wp-content\\ai1wm-backups','yes');
 INSERT INTO `wp_options` VALUES (1096,'ai1wm_status','a:3:{s:4:\"type\";s:4:\"done\";s:5:\"title\";s:35:\"Votre site a bien été importé !\";s:7:\"message\";s:415:\"» <a class=\"ai1wm-no-underline\" href=\"http://studio-koukaki.local/wp-admin/options-permalink.php#submit\" target=\"_blank\">Enregistrer la structure des permaliens</a> (nouvelle fenêtre).<br />» <a class=\"ai1wm-no-underline\" href=\"https://wordpress.org/support/view/plugin-reviews/all-in-one-wp-migration?rate=5#postform\" target=\"_blank\">Donner votre avis sur l’extension</a> (facultatif – nouvelle fenêtre).\";}','yes');
-INSERT INTO `wp_options` VALUES (1097,'_transient_health-check-site-status-result','{\"good\":13,\"recommended\":4,\"critical\":1}','yes');
-INSERT INTO `wp_options` VALUES (1102,'_site_transient_ai1wm_last_check_for_updates','1691502753','no');
-INSERT INTO `wp_options` VALUES (1103,'_site_transient_update_core','O:8:\"stdClass\":4:{s:7:\"updates\";a:1:{i:0;O:8:\"stdClass\":10:{s:8:\"response\";s:6:\"latest\";s:8:\"download\";s:65:\"https://downloads.wordpress.org/release/fr_FR/wordpress-6.2.2.zip\";s:6:\"locale\";s:5:\"fr_FR\";s:8:\"packages\";O:8:\"stdClass\":5:{s:4:\"full\";s:65:\"https://downloads.wordpress.org/release/fr_FR/wordpress-6.2.2.zip\";s:10:\"no_content\";s:0:\"\";s:11:\"new_bundled\";s:0:\"\";s:7:\"partial\";s:0:\"\";s:8:\"rollback\";s:0:\"\";}s:7:\"current\";s:5:\"6.2.2\";s:7:\"version\";s:5:\"6.2.2\";s:11:\"php_version\";s:6:\"5.6.20\";s:13:\"mysql_version\";s:3:\"5.0\";s:11:\"new_bundled\";s:3:\"6.1\";s:15:\"partial_version\";s:0:\"\";}}s:12:\"last_checked\";i:1691502753;s:15:\"version_checked\";s:5:\"6.2.2\";s:12:\"translations\";a:0:{}}','no');
-INSERT INTO `wp_options` VALUES (1104,'_site_transient_update_themes','O:8:\"stdClass\":5:{s:12:\"last_checked\";i:1691502753;s:7:\"checked\";a:5:{s:10:\"foce-child\";s:3:\"0.1\";s:4:\"foce\";s:5:\"1.0.0\";s:15:\"twentytwentyone\";s:3:\"1.8\";s:17:\"twentytwentythree\";s:3:\"1.1\";s:15:\"twentytwentytwo\";s:3:\"1.4\";}s:8:\"response\";a:0:{}s:9:\"no_update\";a:3:{s:15:\"twentytwentyone\";a:6:{s:5:\"theme\";s:15:\"twentytwentyone\";s:11:\"new_version\";s:3:\"1.8\";s:3:\"url\";s:45:\"https://wordpress.org/themes/twentytwentyone/\";s:7:\"package\";s:61:\"https://downloads.wordpress.org/theme/twentytwentyone.1.8.zip\";s:8:\"requires\";s:3:\"5.3\";s:12:\"requires_php\";s:3:\"5.6\";}s:17:\"twentytwentythree\";a:6:{s:5:\"theme\";s:17:\"twentytwentythree\";s:11:\"new_version\";s:3:\"1.1\";s:3:\"url\";s:47:\"https://wordpress.org/themes/twentytwentythree/\";s:7:\"package\";s:63:\"https://downloads.wordpress.org/theme/twentytwentythree.1.1.zip\";s:8:\"requires\";s:3:\"6.1\";s:12:\"requires_php\";s:3:\"5.6\";}s:15:\"twentytwentytwo\";a:6:{s:5:\"theme\";s:15:\"twentytwentytwo\";s:11:\"new_version\";s:3:\"1.4\";s:3:\"url\";s:45:\"https://wordpress.org/themes/twentytwentytwo/\";s:7:\"package\";s:61:\"https://downloads.wordpress.org/theme/twentytwentytwo.1.4.zip\";s:8:\"requires\";s:3:\"5.9\";s:12:\"requires_php\";s:3:\"5.6\";}}s:12:\"translations\";a:0:{}}','no');
+INSERT INTO `wp_options` VALUES (1097,'_transient_health-check-site-status-result','{\"good\":11,\"recommended\":5,\"critical\":2}','yes');
+INSERT INTO `wp_options` VALUES (1102,'_site_transient_ai1wm_last_check_for_updates','1692202360','no');
 INSERT INTO `wp_options` VALUES (1107,'swift_performance_plugin_organizer','a:0:{}','yes');
 INSERT INTO `wp_options` VALUES (1108,'jetpack_active_modules','a:0:{}','yes');
 INSERT INTO `wp_options` VALUES (1109,'db_upgraded','','yes');
-INSERT INTO `wp_options` VALUES (1126,'can_compress_scripts','1','no');
-INSERT INTO `wp_options` VALUES (1252,'_site_transient_timeout_php_check_9522db31646a2e4672d744b6f556967b','1692020062','no');
-INSERT INTO `wp_options` VALUES (1253,'_site_transient_php_check_9522db31646a2e4672d744b6f556967b','a:5:{s:19:\"recommended_version\";s:3:\"7.4\";s:15:\"minimum_version\";s:3:\"7.0\";s:12:\"is_supported\";b:1;s:9:\"is_secure\";b:1;s:13:\"is_acceptable\";b:1;}','no');
-INSERT INTO `wp_options` VALUES (1265,'_site_transient_timeout_theme_roots','1691504553','no');
-INSERT INTO `wp_options` VALUES (1266,'_site_transient_theme_roots','a:5:{s:10:\"foce-child\";s:7:\"/themes\";s:4:\"foce\";s:7:\"/themes\";s:15:\"twentytwentyone\";s:7:\"/themes\";s:17:\"twentytwentythree\";s:7:\"/themes\";s:15:\"twentytwentytwo\";s:7:\"/themes\";}','no');
-INSERT INTO `wp_options` VALUES (1267,'_site_transient_update_plugins','O:8:\"stdClass\":5:{s:12:\"last_checked\";i:1691502754;s:8:\"response\";a:1:{s:51:\"all-in-one-wp-migration/all-in-one-wp-migration.php\";O:8:\"stdClass\":12:{s:2:\"id\";s:37:\"w.org/plugins/all-in-one-wp-migration\";s:4:\"slug\";s:23:\"all-in-one-wp-migration\";s:6:\"plugin\";s:51:\"all-in-one-wp-migration/all-in-one-wp-migration.php\";s:11:\"new_version\";s:4:\"7.77\";s:3:\"url\";s:54:\"https://wordpress.org/plugins/all-in-one-wp-migration/\";s:7:\"package\";s:71:\"https://downloads.wordpress.org/plugin/all-in-one-wp-migration.7.77.zip\";s:5:\"icons\";a:2:{s:2:\"2x\";s:76:\"https://ps.w.org/all-in-one-wp-migration/assets/icon-256x256.png?rev=2458334\";s:2:\"1x\";s:76:\"https://ps.w.org/all-in-one-wp-migration/assets/icon-128x128.png?rev=2458334\";}s:7:\"banners\";a:2:{s:2:\"2x\";s:79:\"https://ps.w.org/all-in-one-wp-migration/assets/banner-1544x500.png?rev=2902233\";s:2:\"1x\";s:78:\"https://ps.w.org/all-in-one-wp-migration/assets/banner-772x250.png?rev=2902233\";}s:11:\"banners_rtl\";a:0:{}s:8:\"requires\";s:3:\"3.3\";s:6:\"tested\";s:3:\"6.3\";s:12:\"requires_php\";s:3:\"5.3\";}}s:12:\"translations\";a:0:{}s:9:\"no_update\";a:0:{}s:7:\"checked\";a:1:{s:51:\"all-in-one-wp-migration/all-in-one-wp-migration.php\";s:4:\"7.76\";}}','no');
+INSERT INTO `wp_options` VALUES (1283,'_site_transient_timeout_browser_15c2f6f9416d00cec8b4f729460293c0','1692220813','no');
+INSERT INTO `wp_options` VALUES (1284,'_site_transient_browser_15c2f6f9416d00cec8b4f729460293c0','a:10:{s:4:\"name\";s:6:\"Chrome\";s:7:\"version\";s:9:\"115.0.0.0\";s:8:\"platform\";s:7:\"Windows\";s:10:\"update_url\";s:29:\"https://www.google.com/chrome\";s:7:\"img_src\";s:43:\"http://s.w.org/images/browsers/chrome.png?1\";s:11:\"img_src_ssl\";s:44:\"https://s.w.org/images/browsers/chrome.png?1\";s:15:\"current_version\";s:2:\"18\";s:7:\"upgrade\";b:0;s:8:\"insecure\";b:0;s:6:\"mobile\";b:0;}','no');
+INSERT INTO `wp_options` VALUES (1366,'_site_transient_update_core','O:8:\"stdClass\":4:{s:7:\"updates\";a:1:{i:0;O:8:\"stdClass\":10:{s:8:\"response\";s:6:\"latest\";s:8:\"download\";s:63:\"https://downloads.wordpress.org/release/fr_FR/wordpress-6.3.zip\";s:6:\"locale\";s:5:\"fr_FR\";s:8:\"packages\";O:8:\"stdClass\":5:{s:4:\"full\";s:63:\"https://downloads.wordpress.org/release/fr_FR/wordpress-6.3.zip\";s:10:\"no_content\";s:0:\"\";s:11:\"new_bundled\";s:0:\"\";s:7:\"partial\";s:0:\"\";s:8:\"rollback\";s:0:\"\";}s:7:\"current\";s:3:\"6.3\";s:7:\"version\";s:3:\"6.3\";s:11:\"php_version\";s:5:\"7.0.0\";s:13:\"mysql_version\";s:3:\"5.0\";s:11:\"new_bundled\";s:3:\"6.1\";s:15:\"partial_version\";s:0:\"\";}}s:12:\"last_checked\";i:1692202360;s:15:\"version_checked\";s:3:\"6.3\";s:12:\"translations\";a:0:{}}','no');
+INSERT INTO `wp_options` VALUES (1367,'can_compress_scripts','1','yes');
+INSERT INTO `wp_options` VALUES (1405,'_site_transient_timeout_theme_roots','1692204160','no');
+INSERT INTO `wp_options` VALUES (1406,'_site_transient_theme_roots','a:5:{s:10:\"foce-child\";s:7:\"/themes\";s:4:\"foce\";s:7:\"/themes\";s:15:\"twentytwentyone\";s:7:\"/themes\";s:17:\"twentytwentythree\";s:7:\"/themes\";s:15:\"twentytwentytwo\";s:7:\"/themes\";}','no');
+INSERT INTO `wp_options` VALUES (1407,'_site_transient_update_themes','O:8:\"stdClass\":5:{s:12:\"last_checked\";i:1692202361;s:7:\"checked\";a:5:{s:10:\"foce-child\";s:3:\"0.1\";s:4:\"foce\";s:5:\"1.0.0\";s:15:\"twentytwentyone\";s:3:\"1.8\";s:17:\"twentytwentythree\";s:3:\"1.1\";s:15:\"twentytwentytwo\";s:3:\"1.4\";}s:8:\"response\";a:1:{s:17:\"twentytwentythree\";a:6:{s:5:\"theme\";s:17:\"twentytwentythree\";s:11:\"new_version\";s:3:\"1.2\";s:3:\"url\";s:47:\"https://wordpress.org/themes/twentytwentythree/\";s:7:\"package\";s:63:\"https://downloads.wordpress.org/theme/twentytwentythree.1.2.zip\";s:8:\"requires\";s:3:\"6.1\";s:12:\"requires_php\";s:3:\"5.6\";}}s:9:\"no_update\";a:2:{s:15:\"twentytwentyone\";a:6:{s:5:\"theme\";s:15:\"twentytwentyone\";s:11:\"new_version\";s:3:\"1.8\";s:3:\"url\";s:45:\"https://wordpress.org/themes/twentytwentyone/\";s:7:\"package\";s:61:\"https://downloads.wordpress.org/theme/twentytwentyone.1.8.zip\";s:8:\"requires\";s:3:\"5.3\";s:12:\"requires_php\";s:3:\"5.6\";}s:15:\"twentytwentytwo\";a:6:{s:5:\"theme\";s:15:\"twentytwentytwo\";s:11:\"new_version\";s:3:\"1.4\";s:3:\"url\";s:45:\"https://wordpress.org/themes/twentytwentytwo/\";s:7:\"package\";s:61:\"https://downloads.wordpress.org/theme/twentytwentytwo.1.4.zip\";s:8:\"requires\";s:3:\"5.9\";s:12:\"requires_php\";s:3:\"5.6\";}}s:12:\"translations\";a:0:{}}','no');
+INSERT INTO `wp_options` VALUES (1408,'_site_transient_update_plugins','O:8:\"stdClass\":5:{s:12:\"last_checked\";i:1692202362;s:8:\"response\";a:1:{s:51:\"all-in-one-wp-migration/all-in-one-wp-migration.php\";O:8:\"stdClass\":12:{s:2:\"id\";s:37:\"w.org/plugins/all-in-one-wp-migration\";s:4:\"slug\";s:23:\"all-in-one-wp-migration\";s:6:\"plugin\";s:51:\"all-in-one-wp-migration/all-in-one-wp-migration.php\";s:11:\"new_version\";s:4:\"7.77\";s:3:\"url\";s:54:\"https://wordpress.org/plugins/all-in-one-wp-migration/\";s:7:\"package\";s:71:\"https://downloads.wordpress.org/plugin/all-in-one-wp-migration.7.77.zip\";s:5:\"icons\";a:2:{s:2:\"2x\";s:76:\"https://ps.w.org/all-in-one-wp-migration/assets/icon-256x256.png?rev=2458334\";s:2:\"1x\";s:76:\"https://ps.w.org/all-in-one-wp-migration/assets/icon-128x128.png?rev=2458334\";}s:7:\"banners\";a:2:{s:2:\"2x\";s:79:\"https://ps.w.org/all-in-one-wp-migration/assets/banner-1544x500.png?rev=2902233\";s:2:\"1x\";s:78:\"https://ps.w.org/all-in-one-wp-migration/assets/banner-772x250.png?rev=2902233\";}s:11:\"banners_rtl\";a:0:{}s:8:\"requires\";s:3:\"3.3\";s:6:\"tested\";s:3:\"6.3\";s:12:\"requires_php\";s:3:\"5.3\";}}s:12:\"translations\";a:0:{}s:9:\"no_update\";a:0:{}s:7:\"checked\";a:1:{s:51:\"all-in-one-wp-migration/all-in-one-wp-migration.php\";s:4:\"7.76\";}}','no');
 /*!40000 ALTER TABLE `wp_options` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -320,7 +320,7 @@ CREATE TABLE `wp_postmeta` (
   PRIMARY KEY (`meta_id`),
   KEY `post_id` (`post_id`),
   KEY `meta_key` (`meta_key`(191))
-) ENGINE=InnoDB AUTO_INCREMENT=96 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_520_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=104 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_520_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -330,9 +330,9 @@ CREATE TABLE `wp_postmeta` (
 LOCK TABLES `wp_postmeta` WRITE;
 /*!40000 ALTER TABLE `wp_postmeta` DISABLE KEYS */;
 INSERT INTO `wp_postmeta` VALUES (2,3,'_wp_page_template','default');
-INSERT INTO `wp_postmeta` VALUES (9,8,'_edit_lock','1654398916:1');
+INSERT INTO `wp_postmeta` VALUES (9,8,'_edit_lock','1691615891:1');
 INSERT INTO `wp_postmeta` VALUES (13,17,'_edit_last','1');
-INSERT INTO `wp_postmeta` VALUES (14,17,'_edit_lock','1654413553:1');
+INSERT INTO `wp_postmeta` VALUES (14,17,'_edit_lock','1691939916:1');
 INSERT INTO `wp_postmeta` VALUES (15,17,'_main_char_field','on');
 INSERT INTO `wp_postmeta` VALUES (16,18,'_wp_attached_file','2022/06/Kawaneko.png');
 INSERT INTO `wp_postmeta` VALUES (17,18,'_wp_attachment_metadata','a:6:{s:5:\"width\";i:400;s:6:\"height\";i:400;s:4:\"file\";s:20:\"2022/06/Kawaneko.png\";s:8:\"filesize\";i:19358;s:5:\"sizes\";a:2:{s:6:\"medium\";a:5:{s:4:\"file\";s:20:\"Kawaneko-300x300.png\";s:5:\"width\";i:300;s:6:\"height\";i:300;s:9:\"mime-type\";s:9:\"image/png\";s:8:\"filesize\";i:28072;}s:9:\"thumbnail\";a:5:{s:4:\"file\";s:20:\"Kawaneko-150x150.png\";s:5:\"width\";i:150;s:6:\"height\";i:150;s:9:\"mime-type\";s:9:\"image/png\";s:8:\"filesize\";i:11918;}}s:10:\"image_meta\";a:12:{s:8:\"aperture\";s:1:\"0\";s:6:\"credit\";s:0:\"\";s:6:\"camera\";s:0:\"\";s:7:\"caption\";s:0:\"\";s:17:\"created_timestamp\";s:1:\"0\";s:9:\"copyright\";s:0:\"\";s:12:\"focal_length\";s:1:\"0\";s:3:\"iso\";s:1:\"0\";s:13:\"shutter_speed\";s:1:\"0\";s:5:\"title\";s:0:\"\";s:11:\"orientation\";s:1:\"0\";s:8:\"keywords\";a:0:{}}}');
@@ -342,7 +342,7 @@ INSERT INTO `wp_postmeta` VALUES (20,19,'_edit_last','1');
 INSERT INTO `wp_postmeta` VALUES (21,19,'_edit_lock','1654415658:1');
 INSERT INTO `wp_postmeta` VALUES (32,24,'_main_char_field','0');
 INSERT INTO `wp_postmeta` VALUES (33,24,'_edit_last','1');
-INSERT INTO `wp_postmeta` VALUES (34,24,'_edit_lock','1654415645:1');
+INSERT INTO `wp_postmeta` VALUES (34,24,'_edit_lock','1691939891:1');
 INSERT INTO `wp_postmeta` VALUES (36,25,'_main_char_field','0');
 INSERT INTO `wp_postmeta` VALUES (37,25,'_edit_last','1');
 INSERT INTO `wp_postmeta` VALUES (38,25,'_edit_lock','1654415624:1');
@@ -373,6 +373,14 @@ INSERT INTO `wp_postmeta` VALUES (92,43,'_menu_item_classes','a:1:{i:0;s:0:\"\";
 INSERT INTO `wp_postmeta` VALUES (93,43,'_menu_item_xfn','');
 INSERT INTO `wp_postmeta` VALUES (94,43,'_menu_item_url','');
 INSERT INTO `wp_postmeta` VALUES (95,43,'_menu_item_orphaned','1690406016');
+INSERT INTO `wp_postmeta` VALUES (96,44,'_main_char_field','0');
+INSERT INTO `wp_postmeta` VALUES (97,45,'_main_char_field','0');
+INSERT INTO `wp_postmeta` VALUES (98,45,'_edit_last','1');
+INSERT INTO `wp_postmeta` VALUES (99,45,'_edit_lock','1691957506:1');
+INSERT INTO `wp_postmeta` VALUES (100,45,'_thumbnail_id','18');
+INSERT INTO `wp_postmeta` VALUES (101,45,'_wp_trash_meta_status','publish');
+INSERT INTO `wp_postmeta` VALUES (102,45,'_wp_trash_meta_time','1691957651');
+INSERT INTO `wp_postmeta` VALUES (103,45,'_wp_desired_post_slug','bibouka');
 /*!40000 ALTER TABLE `wp_postmeta` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -412,7 +420,7 @@ CREATE TABLE `wp_posts` (
   KEY `type_status_date` (`post_type`,`post_status`,`post_date`,`ID`),
   KEY `post_parent` (`post_parent`),
   KEY `post_author` (`post_author`)
-) ENGINE=InnoDB AUTO_INCREMENT=44 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_520_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=46 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_520_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -437,6 +445,8 @@ INSERT INTO `wp_posts` VALUES (32,1,'2022-06-05 07:55:28','2022-06-05 07:55:28',
 INSERT INTO `wp_posts` VALUES (33,1,'2022-06-05 07:55:28','2022-06-05 07:55:28','','Pinku-1','','inherit','open','closed','','pinku-1','','','2022-06-05 07:55:28','2022-06-05 07:55:28','',0,'http://studio-koukaki.local/wp-content/uploads/2022/06/Pinku-1.png',0,'attachment','image/png',0);
 INSERT INTO `wp_posts` VALUES (34,1,'2022-06-05 07:55:28','2022-06-05 07:55:28','','Orenjiiro-1','','inherit','open','closed','','orenjiiro-1','','','2022-06-05 07:55:28','2022-06-05 07:55:28','',0,'http://studio-koukaki.local/wp-content/uploads/2022/06/Orenjiiro-1.png',0,'attachment','image/png',0);
 INSERT INTO `wp_posts` VALUES (43,1,'2023-07-26 21:13:36','0000-00-00 00:00:00',' ','','','draft','closed','closed','','','','','2023-07-26 21:13:36','0000-00-00 00:00:00','',0,'http://studio-koukaki.local/?p=43',1,'nav_menu_item','',0);
+INSERT INTO `wp_posts` VALUES (44,1,'2023-08-09 21:20:13','0000-00-00 00:00:00','','Brouillon auto','','auto-draft','open','open','','','','','2023-08-09 21:20:13','0000-00-00 00:00:00','',0,'http://studio-koukaki.local/?p=44',0,'post','',0);
+INSERT INTO `wp_posts` VALUES (45,1,'2023-08-13 15:21:18','2023-08-13 15:21:18','','Bibouka','','trash','closed','closed','','bibouka__trashed','','','2023-08-13 20:14:11','2023-08-13 20:14:11','',0,'http://studio-koukaki.local/?post_type=characters&#038;p=45',0,'characters','',0);
 /*!40000 ALTER TABLE `wp_posts` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -569,7 +579,7 @@ CREATE TABLE `wp_usermeta` (
   PRIMARY KEY (`umeta_id`),
   KEY `user_id` (`user_id`),
   KEY `meta_key` (`meta_key`(191))
-) ENGINE=InnoDB AUTO_INCREMENT=24 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_520_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=25 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_520_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -593,12 +603,11 @@ INSERT INTO `wp_usermeta` VALUES (12,1,'wp_capabilities','a:1:{s:13:\"administra
 INSERT INTO `wp_usermeta` VALUES (13,1,'wp_user_level','10');
 INSERT INTO `wp_usermeta` VALUES (14,1,'dismissed_wp_pointers','theme_editor_notice');
 INSERT INTO `wp_usermeta` VALUES (15,1,'show_welcome_panel','1');
-INSERT INTO `wp_usermeta` VALUES (16,1,'session_tokens','a:2:{s:64:\"7194dac6b33c14807cc79226a1826eefffbf4424c08449f348910e94a0cc8c8b\";a:4:{s:10:\"expiration\";i:1690721867;s:2:\"ip\";s:9:\"127.0.0.1\";s:2:\"ua\";s:111:\"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/115.0.0.0 Safari/537.36\";s:5:\"login\";i:1690549067;}s:64:\"bfd74623517e832a1a310b9615731442a8777089a306518cdea01e78481da340\";a:4:{s:10:\"expiration\";i:1690885192;s:2:\"ip\";s:9:\"127.0.0.1\";s:2:\"ua\";s:111:\"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/115.0.0.0 Safari/537.36\";s:5:\"login\";i:1690712392;}}');
-INSERT INTO `wp_usermeta` VALUES (17,1,'wp_dashboard_quick_press_last_post_id','41');
+INSERT INTO `wp_usermeta` VALUES (17,1,'wp_dashboard_quick_press_last_post_id','44');
 INSERT INTO `wp_usermeta` VALUES (18,1,'wp_user-settings','libraryContent=browse');
 INSERT INTO `wp_usermeta` VALUES (19,1,'wp_user-settings-time','1654411758');
 INSERT INTO `wp_usermeta` VALUES (20,1,'wp_media_library_mode','grid');
-INSERT INTO `wp_usermeta` VALUES (21,1,'wp_persisted_preferences','a:2:{s:17:\"core/edit-widgets\";a:2:{s:26:\"isComplementaryAreaVisible\";b:1;s:12:\"welcomeGuide\";b:0;}s:9:\"_modified\";s:24:\"2023-07-26T21:13:32.766Z\";}');
+INSERT INTO `wp_usermeta` VALUES (21,1,'wp_persisted_preferences','a:3:{s:17:\"core/edit-widgets\";a:2:{s:26:\"isComplementaryAreaVisible\";b:1;s:12:\"welcomeGuide\";b:0;}s:9:\"_modified\";s:24:\"2023-08-09T21:20:34.388Z\";s:14:\"core/edit-post\";a:1:{s:26:\"isComplementaryAreaVisible\";b:1;}}');
 INSERT INTO `wp_usermeta` VALUES (22,1,'managenav-menuscolumnshidden','a:5:{i:0;s:11:\"link-target\";i:1;s:11:\"css-classes\";i:2;s:3:\"xfn\";i:3;s:11:\"description\";i:4;s:15:\"title-attribute\";}');
 INSERT INTO `wp_usermeta` VALUES (23,1,'metaboxhidden_nav-menus','a:2:{i:0;s:24:\"add-post-type-characters\";i:1;s:12:\"add-post_tag\";}');
 /*!40000 ALTER TABLE `wp_usermeta` ENABLE KEYS */;
@@ -648,4 +657,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2023-08-09  0:46:06
+-- Dump completed on 2023-08-17  1:23:03

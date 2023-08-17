@@ -9,12 +9,12 @@ get_header();
         <video id="background-video" class="parallax" poster="<?php echo get_stylesheet_directory_uri(). '/assets/images/banner.png' ?>" autoplay loop muted>
             <source src="<?php echo get_stylesheet_directory_uri(). '/assets/videos/video_header.mp4'; ?>" type="video/mp4">
         </video>
-        <img src="<?php echo get_template_directory_uri() . '/assets/images/logo.png'; ?> "
+        <img class="banner__img__animation parallax-title" src="<?php echo get_template_directory_uri() . '/assets/images/logo.png'; ?> "
             alt="logo Fleurs d'oranger & chats errants">
     </section>
 
 
-    <section id="#story" class="story fadeIn">
+    <section id="story" class="story fadeIn">
 
         <h2> <span class="story__title">L'histoire </span> </h2>
         <article id="" class="story__article">

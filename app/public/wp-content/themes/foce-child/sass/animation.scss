@@ -2,7 +2,7 @@
 $anim-dur: 10000ms;
 $anim-delay: 1ms;
 $sectionPosition: 0%;
-$sectionUp: 200%;
+$sectionUp: 100%;
 $sectionDown: -100%;
 $animationDelay: 800ms;
 $animationDuration: 800ms;
@@ -51,23 +51,23 @@ $animationDuration: 800ms;
     }
 
     20% {
-        transform: translate(11px, -6px);
+        transform: translate(6px, -3px);
     }
 
     30% {
-        transform: translate(5px, 10px);
+        transform: translate(5px, 5px);
     }
 
     50% {
-        transform: translate(-4px, -12px);
+        transform: translate(-4px, -6px);
     }
 
     70% {
-        transform: translate(-8px, -8px);
+        transform: translate(-4px, 0px);
     }
 
     90% {
-        transform: translate(-13px, -3px);
+        transform: translate(-4px, -2px);
     }
 }
 
@@ -80,154 +80,10 @@ $animationDuration: 800ms;
     animation: fadeDown $animationDuration ease-out #{$animationDuration + 20} both;
 }
 
-
-// STRUCTURE SITE //
-#page {
-    overflow: hidden;
-}
-.banner {
-    @media (min-width: 426px) {
-    background-image: none;
-    }
-    overflow:hidden;
-    img {
-        animation: fadeIn $animationDuration ease-out $animationDelay both, float 6s 2s ease-in-out infinite;
-    }
-    #background-video {
-        position: fixed;
-        z-index: -1;
-        width: 100%;
-        transition: transform 1s ease-in-out;
-        @media (max-width:425px ){
-            display: none;
-        }
-    }
-}
-.story {
-    h2 {
-        &::after {
-            animation: RotationFlower $anim-dur $anim-delay linear infinite;
-        }
-
-        .story__title {
-            display: inline-block;
-            opacity: 0;
-        }
-    }
-
-    &__article {
-        &::after {
-            animation: RotationFlower $anim-dur $anim-delay linear infinite;
-        }
-    }
-    #place {
-        background-image: url("../assets/images/Studio_Koukaki-image_place.png");
-            .clouds {
-                width: 100%;
-                height: 100%;
-                transform: translateX(0);
-            }
-            .big_cloud {
-                filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
-                position: absolute;
-                right: 93px;
-                top: 65px;
-                transform: translateX(0);
-            }
-            .little_cloud {
-                filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
-                position: absolute;
-                right: 505px;
-                top: 248px;
-                transform: translateX(0);
-            }
-    }
+.fadeIn_banner__img__animation  {
+    animation: fadeIn $animationDuration;
 }
 
-#studio {
-    h2 {
-        &::before {
-            animation: RotationFlower $anim-dur $anim-delay linear infinite;
-        }
-
-        &::after {
-            animation: RotationFlower $anim-dur $anim-delay linear infinite;
-        }
-
-        .studio__title__first {
-            display: inline-block;
-            opacity: 0;
-            animation-delay: 800ms;
-        }
-
-        .studio__title__second {
-            display: inline-block;
-            opacity: 0;
-            animation-delay: 1s;
-        }
-    }
-
-}
-
-.nomination {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-top: 200px;
-
-    &::before {
-        content: url('../assets/images/Sunflower.png');
-        position: absolute;
-        left: 4em;
-        top: -12em;
-        animation: RotationFlower $anim-dur $anim-delay linear infinite;
-    }
-
-    &::after {
-        content: url('../assets/images/orchid.png');
-        position: absolute;
-        right: -4em;
-        bottom: 22em;
-        animation: RotationFlower $anim-dur $anim-delay linear infinite;
-
-    }
-
-    h3 {
-        background-image: url("../assets/images/orange_oscars_bg.png");
-        background-repeat: no-repeat;
-        background-size: 792px 269px;
-        margin: 0;
-        background-position: center;
-        text-align: left;
-        font-size: 42px;
-        line-height: normal;
-        font-weight: 700;
-        letter-spacing: -0.84px;
-        padding: 1em 2em;
-        text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-        width: 815px;
-    }
-
-    img {
-        width: 278px;
-        height: 129px;
-    }
-}
-
-#colophon {
-    &::before {
-        display: none;
-        animation: RotationFlower $anim-dur $anim-delay linear infinite;
-    }
-
-    &::after {
-        display: none;
-        animation: RotationFlower $anim-dur $anim-delay linear infinite;
-    }
-
-    ul {
-        &::after {
-            animation: RotationFlower $anim-dur $anim-delay linear infinite;
-        }
-    }
+.banner__img__animation {
+    animation: ease-out $animationDelay both, float 6s 2s ease-in-out infinite;
 }

@@ -23,47 +23,43 @@ scrollAnimation('.studio__title__second', '#studio', 'fadeIn');
 
 
 // Parralaxe bannière // 
-// // Get the element to be parallaxed
-// const parallaxElement = document.querySelector('.parallax')
+const parallaxTitle = document.querySelector('.parallax-title');
+console.log(parallaxTitle);
+const parallaxBg = document.querySelector('.parallax');
 
-// // The parallax function
-// const parallax = element => {
-//     if ('undefined' !== element) {
-//         let y = window.innerHeight - element.getBoundingClientRect().top
-//         if (y > 0) {
-//             element.style.transform = 'translate3d(0, -' + (0.15 * y) + 'px ,0)'
-//         }
-//     }
-// }
+window.addEventListener('scroll', function() {
+  let scrolled = window.scrollY;
+  let bannerImg = this.document.querySelector('.banner img');
+  parallaxTitle.style.transform = 'translateY(' + (scrolled * 0.5  * -1) + 'px)';
+  parallaxBg.style.transform = 'translateY(' + (scrolled * 0.2) + 'px)';
+  
+  if (scrolled === 0) {
+    bannerImg.classList.add('banner__img__animation');
+  } else {
+    bannerImg.classList.remove('banner__img__animation');
+  }
+});
 
-// // If the element is in the viewport, set its position
-// // parallax(parallaxElement)
 
-// // Call the function on scroll
-// window.onscroll = () => {
-//     parallax(parallaxElement)
-// }
 
 // Parralaxe nuages //
 
 const bigCloud = document.querySelector('.clouds');
 let isScrolling = false;
 
-const vitesse1 = 1; // Ajustez la vitesse pour Big Cloud
-const vitesse2 = 1; // Ajustez la vitesse pour Little Cloud
+const vitesse1 = 1; // Ajustez la vitesse
 
 function adjustCloudPosition(cloud, startRight, vitesse) {
   const container = document.querySelector('#place');
   const containerHeight = container.clientHeight;
-  const windowHeight = window.innerHeight;
   const scrollPosition = window.scrollY;
 
-  const maxScroll = containerHeight - windowHeight;
+  const maxScroll = -containerHeight;
+
   const scrollPercentage = scrollPosition / maxScroll;
   const maxRightPosition = 300;
 
   const cloudStartRight = startRight;
-  console.log(startRight);
   const cloudEndRight = cloudStartRight + maxRightPosition;
 
   const cloudCurrentRight = cloudStartRight + (scrollPercentage * (cloudEndRight - cloudStartRight)) * vitesse;
@@ -72,16 +68,38 @@ function adjustCloudPosition(cloud, startRight, vitesse) {
 
 function handleScroll() {
   if (!isScrolling) {
-    isScrolling = true;
     requestAnimationFrame(function() {
-      adjustCloudPosition(bigCloud, 0, vitesse1);
+      adjustCloudPosition(bigCloud, 500, vitesse1);
       isScrolling = false;
     });
   }
 }
 
-// Appeler initialement la fonction d'ajustement pour la position de départ
-adjustCloudPosition(bigCloud, 0, vitesse1);
-
 // Attacher l'événement de défilement à la fonction d'ajustement
 window.addEventListener('scroll', handleScroll);
+
+
+
+// Menu burger //
+function openMenu() {
+  document.querySelector('.header__nav').classList.add('open');
+  document.querySelector('.header__nav__menu__link-story span').classList.add('fadeIn');
+  document.querySelector('.header__banner__burger__closed').classList.add('open');
+  document.querySelector('.header__banner__burger__open').classList.add('close');
+}
+
+function closeMenu() {
+  document.querySelector('.header__nav').classList.remove('open');
+  document.querySelector('.header__nav').classList.remove('fadeIn');
+  document.querySelector('.header__banner__burger__closed').classList.remove('open');
+  document.querySelector('.header__banner__burger__open').classList.remove('close');
+  
+}
+
+
+let links = document.querySelectorAll('.header__nav__menu__link a');
+console.log(links);
+
+links.forEach(link => {
+  link.addEventListener("click", closeMenu);
+});

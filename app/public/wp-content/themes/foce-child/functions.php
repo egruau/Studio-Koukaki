@@ -2,9 +2,7 @@
 add_action( 'wp_enqueue_scripts', 'theme_enqueue_styles' );
 function theme_enqueue_styles() {
     wp_enqueue_style( 'parent-style', get_template_directory_uri() . '/style.css' );
-    wp_enqueue_style('animation', get_stylesheet_directory_uri(). '/stylesheets/animation.css');
-    wp_enqueue_style('burger-menu', get_stylesheet_directory_uri(). '/stylesheets/burger-menu.css');
-    wp_enqueue_style('character_style', get_stylesheet_directory_uri(). '/stylesheets/swiper-characters.css');
+    wp_enqueue_style('animation-style', get_stylesheet_directory_uri(). '/stylesheets/style.css');
     wp_enqueue_style('swiper-style', get_stylesheet_directory_uri().'/swiper-10.1.0/package/swiper-bundle.min.css');
     wp_enqueue_script('swiper-lib', get_stylesheet_directory_uri().'/swiper-10.1.0/package/swiper-bundle.min.js');
     wp_enqueue_script('script', get_stylesheet_directory_uri().'/js/script.js', array(), 1.1, true);

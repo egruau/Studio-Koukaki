@@ -1,184 +1,151 @@
-// VARIABLES // 
-$anim-dur: 10000ms;
-$anim-delay: 1ms;
-$sectionPosition: 0%;
-$sectionUp: 200%;
-$sectionDown: -100%;
-$animationDelay: 800ms;
-$animationDuration: 800ms;
+@import "animation.scss";
 
-// ** KEYFRAMES ** //
-@keyframes RotationFlower {
-    from {
-        transform: rotate(0turn);
-    }
-
-    to {
-        transform: rotate(1turn);
-    }
+.open {
+    transform: initial!important;
+    display: block!important;
 }
 
-@keyframes float {
-
-    0%,
-    100% {
-        transform: translate(0, 0);
-    }
-
-    20% {
-        transform: translate(11px, -6px);
-    }
-
-    30% {
-        transform: translate(5px, 10px);
-    }
-
-    50% {
-        transform: translate(-4px, -12px);
-    }
-
-    70% {
-        transform: translate(-8px, -8px);
-    }
-
-    90% {
-        transform: translate(-13px, -3px);
-    }
+.close {
+    display: none!important;
 }
 
-// ** STYLE ** //
 
-.header {
+.header { 
     background-color: #FFD5A2;
     max-width: 1440px;
     width: 100%;
     position: fixed;
     z-index: 9999;
     display: block;
-    // height: 80px;
-}
-
-.header__banner {
-    height: 80px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-
-.header__banner__title a {
-    text-decoration: none;
-    letter-spacing: -0.43px;
-    font-size: 21.48px;
-    font-weight: 700;
-}
-
-.header__banner__title a:hover {
-    color: black;
-}
-
-.header__nav {
-    background-color: #FFF5E9;
-    max-width: 1440px;
-    width: 100%;
-    height: calc(100vh - 80px);
-    position: fixed;
-    z-index: 1000;
-    border: 1px solid black;
-    overflow: hidden;
-}
-
-.header__nav__menu {
-    list-style: none;
-    // margin: auto;
-    height: calc(100vh - 80px);
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-
-    &::after {
-        content: url('../assets/images/Studio-Koukaki-tittle.png');
-        position: absolute;
-        left: 640px;
-        bottom: 40px;
-    }
-}
-
-.header__nav__menu__link {
-    margin-left: auto;
-    margin-right: auto;
-    &-story {
-        &::before {
-            content: url('../assets/images/orchid.png');
-            position: absolute;
-            left: -59px;
-            top: 72px;
-            animation: RotationFlower $anim-dur $anim-delay linear infinite;
+    &__banner {
+        height: 80px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        &__burger {
+                &__open {
+                    position: absolute;
+                    top: 25px;
+                    right:10%;
+                }
+                &__closed {
+                    position: absolute;
+                    top: 25px;
+                    right:10%;
+                    display: none;
+                }        
         }
-        &::after {
-            content: url('../assets/images/Sunflower.png');
-            position: absolute;
-            right: 185px;
-            top: 89px;
-            animation: RotationFlower $anim-dur $anim-delay linear infinite;
+        &__title {
+            a {
+            text-decoration: none;
+            letter-spacing: -0.43px;
+            font-size: 21.48px;
+            font-weight: 700;
+                &:hover {
+                    color: black;
+                }
+            }
         }
     }
-    &-characters {
-        &::before {
-            content: url('../assets/images/cat.png');
-            position: absolute;
-            left: 267px;
-            top: 161px;
-            animation: float 6s 2s ease-in-out infinite;
-        }
-        &::after {
-            content: url('../assets/images/random_flower.png');
-            position: absolute;
-            right: -32px;
-            top: 395px;
-            animation: RotationFlower $anim-dur $anim-delay linear infinite;
-        }
+    &__nav {
+        background-color: #FFF5E9;
+        max-width: 1440px;
+        width: 100%;
+        height: calc(100vh - 80px);
+        position: fixed;
+        z-index: 1000;
+        overflow: hidden;
+        transform: translateY(100%);
+        transition: 0.3s transform ease-in-out;
+        &__menu {
+            list-style: none;
+            height: calc(100vh - 80px);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 50px;    
+            &::after {
+                content: url('../assets/images/Studio-Koukaki-tittle.png');
+                position: absolute;
+                left: 640px;
+                bottom: 40px;
+            }
+            &__link {
+                margin-left: auto;
+                margin-right: auto;
+                &-story {
+                    &::before {
+                        content: url('../assets/images/orchid.png');
+                        position: absolute;
+                        left: -59px;
+                        top: 72px;
+                        animation: RotationFlower $anim-dur $anim-delay linear infinite;
+                    }
+                    &::after {
+                        content: url('../assets/images/Sunflower.png');
+                        position: absolute;
+                        right: 185px;
+                        top: 89px;
+                        animation: RotationFlower $anim-dur $anim-delay linear infinite;
+                    }
+                }
+                &-characters {
+                    &::before {
+                        content: url('../assets/images/cat.png');
+                        position: absolute;
+                        left: 267px;
+                        top: 161px;
+                        animation: float 6s 2s ease-in-out infinite;
+                    }
+                    &::after {
+                        content: url('../assets/images/random_flower.png');
+                        position: absolute;
+                        right: -52px;
+                        bottom: 470px;
+                        animation: RotationFlower $anim-dur $anim-delay linear infinite;
+                    }
+                }
+                &-place {
+                    &::before {
+                        content: url('../assets/images/flower.png');
+                        position: absolute;
+                        left: 213px;
+                        top: 483px;
+                        animation: RotationFlower $anim-dur $anim-delay linear infinite;
+                    }
+                    &::after {
+                        content: url('../assets/images/cat-2.png');
+                        position: absolute;
+                        right: 209px;
+                        top: 470px;
+                        animation: float 6s 2s ease-in-out infinite;
+                    }
+                }
+                &-studio {
+                    &::before {
+                        content: url('../assets/images/cat-1.png');
+                        position: absolute;
+                        left: 79px;
+                        bottom: 100px;
+                        animation: float 6s 2s ease-in-out infinite;
+                    }
+                    &::after {
+                        content: url('../assets/images/hibiscus_footer.png');
+                        position: absolute;
+                        right: -308px;
+                        bottom: -342px;
+                        animation: RotationFlower $anim-dur $anim-delay linear infinite;
+                    }
+                }
+                a {
+                text-decoration: none;
+                font-size: 64px;
+                    &:hover {
+                    text-shadow: 0px 0px 14px #FF5C00;
+                    color: black;
+                    }
+                }
+            }    
+        } 
     }
-    &-place {
-        &::before {
-            content: url('../assets/images/flower.png');
-            position: absolute;
-            left: 213px;
-            top: 483px;
-            animation: RotationFlower $anim-dur $anim-delay linear infinite;
-        }
-        &::after {
-            content: url('../assets/images/cat-2.png');
-            position: absolute;
-            right: 209px;
-            top: 470px;
-            animation: float 6s 2s ease-in-out infinite;
-        }
-    }
-    &-studio {
-        &::before {
-            content: url('../assets/images/cat-1.png');
-            position: absolute;
-            left: 79px;
-            bottom: 100px;
-            animation: float 6s 2s ease-in-out infinite;
-        }
-        &::after {
-            content: url('../assets/images/hibiscus_footer.png');
-            position: absolute;
-            right: -308px;
-            bottom: -342px;
-            animation: RotationFlower $anim-dur $anim-delay linear infinite;
-        }
-    }
-}
-
-.header__nav__menu__link a {
-    text-decoration: none;
-    font-size: 64px;
-}
-
-.header__nav__menu__link a:hover {
-    text-shadow: 0px 0px 14px #FF5C00;
-    color: black;
 }

@@ -1,0 +1,482 @@
+@keyframes RotationFlower {
+  from {
+    transform: rotate(0turn);
+  }
+  to {
+    transform: rotate(1turn);
+  }
+}
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    transform: translateY(100%);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0%);
+  }
+}
+@keyframes fadeDown {
+  0% {
+    opacity: 0;
+    transform: translateY(-100%);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0%);
+  }
+}
+@keyframes float {
+  0%, 100% {
+    transform: translate(0, 0);
+  }
+  20% {
+    transform: translate(6px, -3px);
+  }
+  30% {
+    transform: translate(5px, 5px);
+  }
+  50% {
+    transform: translate(-4px, -6px);
+  }
+  70% {
+    transform: translate(-4px, 0px);
+  }
+  90% {
+    transform: translate(-4px, -2px);
+  }
+}
+.fadeIn {
+  animation: fadeIn 800ms ease-out 800ms both;
+}
+
+.fadeDown {
+  animation: fadeDown 800ms ease-out 820ms both;
+}
+
+.fadeIn_banner__img__animation {
+  animation: fadeIn 800ms;
+}
+
+.banner__img__animation {
+  animation: ease-out 800ms both, float 6s 2s ease-in-out infinite;
+}
+
+@keyframes RotationFlower {
+  from {
+    transform: rotate(0turn);
+  }
+  to {
+    transform: rotate(1turn);
+  }
+}
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    transform: translateY(100%);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0%);
+  }
+}
+@keyframes fadeDown {
+  0% {
+    opacity: 0;
+    transform: translateY(-100%);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0%);
+  }
+}
+@keyframes float {
+  0%, 100% {
+    transform: translate(0, 0);
+  }
+  20% {
+    transform: translate(6px, -3px);
+  }
+  30% {
+    transform: translate(5px, 5px);
+  }
+  50% {
+    transform: translate(-4px, -6px);
+  }
+  70% {
+    transform: translate(-4px, 0px);
+  }
+  90% {
+    transform: translate(-4px, -2px);
+  }
+}
+.fadeIn {
+  animation: fadeIn 800ms ease-out 800ms both;
+}
+
+.fadeDown {
+  animation: fadeDown 800ms ease-out 820ms both;
+}
+
+.fadeIn_banner__img__animation {
+  animation: fadeIn 800ms;
+}
+
+.banner__img__animation {
+  animation: ease-out 800ms both, float 6s 2s ease-in-out infinite;
+}
+
+.open {
+  transform: initial !important;
+  display: block !important;
+}
+
+.close {
+  display: none !important;
+}
+
+.header {
+  background-color: #FFD5A2;
+  max-width: 1440px;
+  width: 100%;
+  position: fixed;
+  z-index: 9999;
+  display: block;
+}
+.header__banner {
+  height: 80px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.header__banner__burger__open {
+  position: absolute;
+  top: 25px;
+  right: 10%;
+}
+.header__banner__burger__closed {
+  position: absolute;
+  top: 25px;
+  right: 10%;
+  display: none;
+}
+.header__banner__title a {
+  text-decoration: none;
+  letter-spacing: -0.43px;
+  font-size: 21.48px;
+  font-weight: 700;
+}
+.header__banner__title a:hover {
+  color: black;
+}
+.header__nav {
+  background-color: #FFF5E9;
+  max-width: 1440px;
+  width: 100%;
+  height: calc(100vh - 80px);
+  position: fixed;
+  z-index: 1000;
+  overflow: hidden;
+  transform: translateY(100%);
+  transition: 0.3s transform ease-in-out;
+}
+.header__nav__menu {
+  list-style: none;
+  height: calc(100vh - 80px);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 50px;
+}
+.header__nav__menu::after {
+  content: url("../assets/images/Studio-Koukaki-tittle.png");
+  position: absolute;
+  left: 640px;
+  bottom: 40px;
+}
+.header__nav__menu__link {
+  margin-left: auto;
+  margin-right: auto;
+}
+.header__nav__menu__link-story::before {
+  content: url("../assets/images/orchid.png");
+  position: absolute;
+  left: -59px;
+  top: 72px;
+  animation: RotationFlower 10000ms 1ms linear infinite;
+}
+.header__nav__menu__link-story::after {
+  content: url("../assets/images/Sunflower.png");
+  position: absolute;
+  right: 185px;
+  top: 89px;
+  animation: RotationFlower 10000ms 1ms linear infinite;
+}
+.header__nav__menu__link-characters::before {
+  content: url("../assets/images/cat.png");
+  position: absolute;
+  left: 267px;
+  top: 161px;
+  animation: float 6s 2s ease-in-out infinite;
+}
+.header__nav__menu__link-characters::after {
+  content: url("../assets/images/random_flower.png");
+  position: absolute;
+  right: -52px;
+  bottom: 470px;
+  animation: RotationFlower 10000ms 1ms linear infinite;
+}
+.header__nav__menu__link-place::before {
+  content: url("../assets/images/flower.png");
+  position: absolute;
+  left: 213px;
+  top: 483px;
+  animation: RotationFlower 10000ms 1ms linear infinite;
+}
+.header__nav__menu__link-place::after {
+  content: url("../assets/images/cat-2.png");
+  position: absolute;
+  right: 209px;
+  top: 470px;
+  animation: float 6s 2s ease-in-out infinite;
+}
+.header__nav__menu__link-studio::before {
+  content: url("../assets/images/cat-1.png");
+  position: absolute;
+  left: 79px;
+  bottom: 100px;
+  animation: float 6s 2s ease-in-out infinite;
+}
+.header__nav__menu__link-studio::after {
+  content: url("../assets/images/hibiscus_footer.png");
+  position: absolute;
+  right: -308px;
+  bottom: -342px;
+  animation: RotationFlower 10000ms 1ms linear infinite;
+}
+.header__nav__menu__link a {
+  text-decoration: none;
+  font-size: 64px;
+}
+.header__nav__menu__link a:hover {
+  text-shadow: 0px 0px 14px #FF5C00;
+  color: black;
+}
+
+@keyframes RotationFlower {
+  from {
+    transform: rotate(0turn);
+  }
+  to {
+    transform: rotate(1turn);
+  }
+}
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    transform: translateY(100%);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0%);
+  }
+}
+@keyframes fadeDown {
+  0% {
+    opacity: 0;
+    transform: translateY(-100%);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0%);
+  }
+}
+@keyframes float {
+  0%, 100% {
+    transform: translate(0, 0);
+  }
+  20% {
+    transform: translate(6px, -3px);
+  }
+  30% {
+    transform: translate(5px, 5px);
+  }
+  50% {
+    transform: translate(-4px, -6px);
+  }
+  70% {
+    transform: translate(-4px, 0px);
+  }
+  90% {
+    transform: translate(-4px, -2px);
+  }
+}
+.fadeIn {
+  animation: fadeIn 800ms ease-out 800ms both;
+}
+
+.fadeDown {
+  animation: fadeDown 800ms ease-out 820ms both;
+}
+
+.fadeIn_banner__img__animation {
+  animation: fadeIn 800ms;
+}
+
+.banner__img__animation {
+  animation: ease-out 800ms both, float 6s 2s ease-in-out infinite;
+}
+
+#page {
+  overflow: hidden;
+}
+
+.banner {
+  overflow: hidden;
+}
+@media (min-width: 426px) {
+  .banner {
+    background-image: none;
+  }
+}
+.banner #background-video {
+  position: fixed;
+  z-index: -1;
+  width: 100%;
+  transition: transform 1s ease-in-out;
+}
+@media (max-width: 425px) {
+  .banner #background-video {
+    display: none;
+  }
+}
+.banner img {
+  transition: transform 1s ease-in-out;
+}
+
+.story h2::after {
+  animation: RotationFlower 10000ms 1ms linear infinite;
+}
+.story h2 .story__title {
+  display: inline-block;
+  opacity: 0;
+}
+.story__article::after {
+  animation: RotationFlower 10000ms 1ms linear infinite;
+}
+.story #place {
+  background-image: url("../assets/images/Studio_Koukaki-image_place.png");
+}
+.story #place .clouds {
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+.story #place .big_cloud {
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+  filter: blur(16.5px);
+  position: absolute;
+  right: 93px;
+  top: 65px;
+}
+.story #place .little_cloud {
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+  filter: blur(16.5px);
+  position: absolute;
+  right: 505px;
+  top: 248px;
+}
+
+#studio h2::before {
+  animation: RotationFlower 10000ms 1ms linear infinite;
+}
+#studio h2::after {
+  animation: RotationFlower 10000ms 1ms linear infinite;
+}
+#studio h2 .studio__title__first {
+  display: inline-block;
+  opacity: 0;
+  animation-delay: 800ms;
+}
+#studio h2 .studio__title__second {
+  display: inline-block;
+  opacity: 0;
+  animation-delay: 1s;
+}
+
+.nomination {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 200px;
+}
+.nomination::before {
+  content: url("../assets/images/Sunflower.png");
+  position: absolute;
+  left: 4em;
+  top: -12em;
+  animation: RotationFlower 10000ms 1ms linear infinite;
+}
+.nomination::after {
+  content: url("../assets/images/orchid.png");
+  position: absolute;
+  right: -4em;
+  bottom: 22em;
+  animation: RotationFlower 10000ms 1ms linear infinite;
+}
+.nomination h3 {
+  background-image: url("../assets/images/orange_oscars_bg.png");
+  background-repeat: no-repeat;
+  background-size: 792px 269px;
+  margin: 0;
+  background-position: center;
+  text-align: left;
+  font-size: 42px;
+  line-height: normal;
+  font-weight: 700;
+  letter-spacing: -0.84px;
+  padding: 1em 2em;
+  text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  width: 815px;
+}
+.nomination img {
+  width: 278px;
+  height: 129px;
+}
+
+#colophon::before {
+  display: none;
+  animation: RotationFlower 10000ms 1ms linear infinite;
+}
+#colophon::after {
+  display: none;
+  animation: RotationFlower 10000ms 1ms linear infinite;
+}
+#colophon ul::after {
+  animation: RotationFlower 10000ms 1ms linear infinite;
+}
+
+.story #characters {
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.swiper {
+  width: 100%;
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+
+.swiper-slide {
+  background-position: center;
+  background-size: cover;
+  width: 300px;
+  height: 300px;
+}
+
+.swiper-slide img {
+  display: block;
+  width: 100%;
+}
+
+/*# sourceMappingURL=style.css.map */
