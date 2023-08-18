@@ -50,16 +50,20 @@
   animation: fadeIn 800ms ease-out 800ms both;
 }
 
+.fadeInHeader {
+  animation: fadeIn 1600ms ease-out 1600ms both;
+}
+
 .fadeDown {
   animation: fadeDown 800ms ease-out 820ms both;
 }
 
 .fadeIn_banner__img__animation {
-  animation: fadeIn 800ms;
+  animation: fadeIn 800ms ease-out 800ms both, float 6s 2s ease-in-out infinite;
 }
 
 .banner__img__animation {
-  animation: ease-out 800ms both, float 6s 2s ease-in-out infinite;
+  animation: float 6s 2s ease-in-out infinite;
 }
 
 #page {

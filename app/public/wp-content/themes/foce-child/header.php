@@ -52,7 +52,7 @@
                 <li class="header__nav__menu__link header__nav__menu__link-story"><a href="#story"><span>Histoire</span></a></li>
                 <li class="header__nav__menu__link header__nav__menu__link-characters"><a href="#characters"><span>Personnages</span></a></li>
                 <li class="header__nav__menu__link header__nav__menu__link-place"><a href="#place"><span>Lieu</span></a></li>
-                <li class="header__nav__menu__link header__nav__menu__link-studio"><a href="#studio"><span>Studio</span> <span>Koukaki</span></a></li>
+                <li class="header__nav__menu__link header__nav__menu__link-studio"><a href="#studio"><span>Studio</span> <span class="span__second">Koukaki</span></a></li>
             </ul>
         </nav>
 	</header><!-- #masthead -->

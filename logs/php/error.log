@@ -79,3 +79,4 @@ Stack trace:
 #2 C:\Users\gruau\OneDrive\Documents\Openclassroom\Projet 9\app\public\index.php(17): require('C:\\Users\\gruau\\...')
 #3 {main}
   thrown in C:\Users\gruau\OneDrive\Documents\Openclassroom\Projet 9\app\public\wp-content\themes\foce-child\front-page.php on line 33
+[18-Aug-2023 15:19:57 UTC] Erreur d’événement de replanification de tâche pour le crochet wp_version_check. Code d’erreur : could_not_set. Message d’erreur : La liste des évènements planifiés n’a pas pu être sauvegardée.. Données : {"schedule":"twicedaily","args":[],"interval":43200}

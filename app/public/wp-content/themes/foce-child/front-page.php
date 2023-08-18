@@ -9,7 +9,7 @@ get_header();
         <video id="background-video" class="parallax" poster="<?php echo get_stylesheet_directory_uri(). '/assets/images/banner.png' ?>" autoplay loop muted>
             <source src="<?php echo get_stylesheet_directory_uri(). '/assets/videos/video_header.mp4'; ?>" type="video/mp4">
         </video>
-        <img class="banner__img__animation parallax-title" src="<?php echo get_template_directory_uri() . '/assets/images/logo.png'; ?> "
+        <img class="fadeIn_banner__img__animation parallax-title" src="<?php echo get_template_directory_uri() . '/assets/images/logo.png'; ?> "
             alt="logo Fleurs d'oranger & chats errants">
     </section>
 

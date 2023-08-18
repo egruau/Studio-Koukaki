@@ -30,13 +30,14 @@ const parallaxBg = document.querySelector('.parallax');
 window.addEventListener('scroll', function() {
   let scrolled = window.scrollY;
   let bannerImg = this.document.querySelector('.banner img');
-  parallaxTitle.style.transform = 'translateY(' + (scrolled * 0.5  * -1) + 'px)';
+  parallaxTitle.style.transform = 'translateY(' + (scrolled * 0.5 * -1) + 'px)';
   parallaxBg.style.transform = 'translateY(' + (scrolled * 0.2) + 'px)';
   
   if (scrolled === 0) {
     bannerImg.classList.add('banner__img__animation');
   } else {
     bannerImg.classList.remove('banner__img__animation');
+    bannerImg.classList.remove('fadeIn_banner__img__animation');
   }
 });
 
@@ -83,7 +84,12 @@ window.addEventListener('scroll', handleScroll);
 // Menu burger //
 function openMenu() {
   document.querySelector('.header__nav').classList.add('open');
-  document.querySelector('.header__nav__menu__link-story span').classList.add('fadeIn');
+  document.querySelector('.header__nav').classList.add('fadeIn');
+  document.querySelector('.header__nav__menu__link-story span').classList.add('fadeInHeader');
+  document.querySelector('.header__nav__menu__link-characters span').classList.add('fadeInHeader');
+  document.querySelector('.header__nav__menu__link-place span').classList.add('fadeInHeader');
+  document.querySelector('.header__nav__menu__link-studio span').classList.add('fadeInHeader');
+  document.querySelector('.header__nav__menu__link-studio .span__second').classList.add('fadeInHeader');
   document.querySelector('.header__banner__burger__closed').classList.add('open');
   document.querySelector('.header__banner__burger__open').classList.add('close');
 }
@@ -91,6 +97,11 @@ function openMenu() {
 function closeMenu() {
   document.querySelector('.header__nav').classList.remove('open');
   document.querySelector('.header__nav').classList.remove('fadeIn');
+  document.querySelector('.header__nav__menu__link-story span').classList.remove('fadeInHeader');
+  document.querySelector('.header__nav__menu__link-characters span').classList.remove('fadeInHeader');
+  document.querySelector('.header__nav__menu__link-place span').classList.remove('fadeInHeader');
+  document.querySelector('.header__nav__menu__link-studio span').classList.remove('fadeInHeader');
+  document.querySelector('.header__nav__menu__link-studio .span__second').classList.remove('fadeInHeader');
   document.querySelector('.header__banner__burger__closed').classList.remove('open');
   document.querySelector('.header__banner__burger__open').classList.remove('close');
   

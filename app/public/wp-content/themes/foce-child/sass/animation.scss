@@ -76,14 +76,19 @@ $animationDuration: 800ms;
     animation: fadeIn $animationDuration ease-out $animationDelay both;
 }
 
+.fadeInHeader {
+    animation: fadeIn calc(800ms + 800ms) ease-out calc(800ms + 800ms) both;
+}
+
 .fadeDown {
     animation: fadeDown $animationDuration ease-out #{$animationDuration + 20} both;
 }
 
 .fadeIn_banner__img__animation  {
-    animation: fadeIn $animationDuration;
+    animation: fadeIn $animationDuration ease-out $animationDelay both, float 6s 2s ease-in-out infinite;
 }
 
 .banner__img__animation {
-    animation: ease-out $animationDelay both, float 6s 2s ease-in-out infinite;
+    animation: float 6s 2s ease-in-out infinite;
+    // animation: ease-out $animationDelay both, float 6s 2s ease-in-out infinite;
 }

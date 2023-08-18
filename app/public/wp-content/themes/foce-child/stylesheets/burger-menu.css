@@ -50,20 +50,23 @@
   animation: fadeIn 800ms ease-out 800ms both;
 }
 
+.fadeInHeader {
+  animation: fadeIn 1600ms ease-out 1600ms both;
+}
+
 .fadeDown {
   animation: fadeDown 800ms ease-out 820ms both;
 }
 
 .fadeIn_banner__img__animation {
-  animation: fadeIn 800ms;
+  animation: fadeIn 800ms ease-out 800ms both, float 6s 2s ease-in-out infinite;
 }
 
 .banner__img__animation {
-  animation: ease-out 800ms both, float 6s 2s ease-in-out infinite;
+  animation: float 6s 2s ease-in-out infinite;
 }
 
 .open {
-  transform: initial !important;
   display: block !important;
 }
 
@@ -114,7 +117,8 @@
   z-index: 1000;
   overflow: hidden;
   transform: translateY(100%);
-  transition: 0.3s transform ease-in-out;
+  animation-delay: 0ms;
+  animation-duration: 200ms;
 }
 .header__nav__menu {
   list-style: none;
@@ -189,6 +193,16 @@
   right: -308px;
   bottom: -342px;
   animation: RotationFlower 10000ms 1ms linear infinite;
+}
+.header__nav__menu__link span {
+  display: inline-block;
+  opacity: 0;
+  animation-delay: 1.2s;
+}
+.header__nav__menu__link .span__second {
+  display: inline-block;
+  opacity: 0;
+  animation-delay: 1.5s;
 }
 .header__nav__menu__link a {
   text-decoration: none;
